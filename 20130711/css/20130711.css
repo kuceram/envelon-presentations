@@ -1,0 +1,23 @@
+.highlight {
+   color: #fab907 !important;
+}
+
+.grails-logo {
+   position: absolute;
+   right: 0;
+}
+.grails-logo img {
+   border: 0 !important;
+   margin: 0 !important;
+}
+
+.groovy-logo {
+   position: absolute;
+   right: 0;
+}
+
+.groovy-logo img {
+   border: 0 !important;
+   margin: 0 !important;
+   width: 100px;
+}

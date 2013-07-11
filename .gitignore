@@ -1,0 +1,12 @@
+.classpath
+.DS_Store
+.project
+.settings
+eclipse
+*.dia.autosave
+/log
+*.log
+*.log.xml
+*.log.xml1
+.idea/
+*.iml

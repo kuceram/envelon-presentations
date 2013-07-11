@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Envelon Presentations</title>
+
+    <meta name="author" content="Matous Kucera">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../lib/revealjs/css/reveal.min.css">
+    <link rel="stylesheet" href="../theme/envelon/fonts/avenir/avenir.css">
+    <link rel="stylesheet" href="../theme/envelon/envelon.css" id="theme">
+    <link rel="stylesheet" href="../theme/envelon/envelon_custom.css">
+
+    <link rel="stylesheet" href="css/20130711.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../lib/revealjs/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="../lib/revealjs/css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../lib/revealjs/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="logo">
+        <!--<img src="theme/envelon/image/logo.png">-->
+    </div>
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+
+            <h3>@Matous Kucera</h3>
+            <h1><span style="color: #fab907;">Grails</span> in Action</h1>
+            <h3>#Envelon s.r.o.</h3>
+
+            <br/>
+
+            <div>11.7.2013</div>
+
+        </section>
+
+        <section>
+            <section>
+                <h2>Envelon s.r.o.</h2>
+                <ul>
+                    <li>
+                        Young start-up company
+                    </li>
+                    <li>
+                        Prague / Munich (Germany)
+                    </li>
+                    <li>
+                        Development on demand
+                    </li>
+                    <li>
+                        Own projects
+                    </li>
+                    <li class="highlight">
+                        Web development - Grails
+                    </li>
+                    <li>
+                        Desktop app development
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Matous Kucera</h2>
+                <ul>
+                    <li>
+                        Bc. computer science CTU Prague
+                    </li>
+                    <li>
+                        MSc. software engineering TU Munich (Germany)
+                    </li>
+                    <li>
+                        Co-founder of Envelon s.r.o.
+                    </li>
+                    <li class="highlight">
+                        4 - ? years of experiences with Grails
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Grails</h2>
+                <div class="grails-logo">
+                    <img src="image/grails.png">
+                </div>
+                <ul>
+                    <li>
+                        Web application framework
+                    </li>
+                    <li class="fragment">
+                        Rapid development framework
+                    </li>
+                    <li class="fragment">
+                        Open source
+                    </li>
+                    <li class="fragment">
+                        Convention over configuration
+                    </li>
+                </ul>
+
+                <br/>
+                <br/>
+                    <h3 class="fragment highlight">
+                        Grails 2.2.3
+                    </h3>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Why Grails?</h2>
+
+                <ul>
+                    <li class="fragment">
+                        Built on enterprise strong frameworks / Languages
+                        <ul>
+                            <li>
+                                Java
+                            </li>
+                            <li>
+                                Spring
+                            </li>
+                            <li>
+                                Hibernate
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="fragment">
+                        Groovy
+                        <ul>
+                            <li>
+                                Advanced JVM Language
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="fragment">
+                        Plug-in System
+                        <ul>
+                            <li>
+                                ~ 950 plugins
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="fragment highlight">
+                        Rapid development framework
+                    </li>
+                    <li class="fragment">
+                        Good Documentation
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Groovy</h2>
+
+                <div class="groovy-logo">
+                    <img src="image/groovy-logo-medium.png">
+                </div>
+
+                Groovy on Grails?
+            </section>
+
+            <section>
+                <h2>Do I need it?</h2>
+                <h3 class="highlight" style="text-align: left">
+                    No
+                </h3>
+                <ul>
+                    <li>You can start with Grails without knowledge of Groovy</li>
+                </ul>
+
+                <h3 class="highlight" style="text-align: left">
+                    Yes
+                </h3>
+                <ul>
+                    <li>You should leverage Groovy!</li>
+                    <li>99% of your future code in Grails</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>What's the Advantage of Groovy</h2>
+
+                <img src="image/semicolons.png">
+
+                <pre class="fragment">
+                    <code class="java">
+package com.envelon.note
+
+import com.envelon.pencil.Pencil
+import org.joda.time.DateTime
+
+class Note extends AbstractNote {
+
+    String content
+    String creator
+    DateTime timestamp
+
+    public String toString() {
+        return "[$timestamp - $creator] $content"
+    }
+}
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h2>But There is <span class="highlight">More!</span></h2>
+                <ul>
+                    <li>Lambda Calculus & Closures</li>
+                    <li>Collections</li>
+                    <li>Elvis Operator</li>
+                    <li>Null Operand</li>
+                    <li>String Templates</li>
+                    <li>Meta Class</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Grails Architecture</h2>
+                <h3>Model View Controller Pattern</h3>
+                <img src="image/mvc.jpeg">
+            </section>
+
+            <section>
+                <h2>Grails Domain Classes</h2>
+                <h3>~ Model</h3>
+                <br/>
+                <img src="image/mvc-m.jpeg">
+
+                <br/>
+                <p class="highlight">
+                    grails-app/domain/.../*.groovy
+                </p>
+            </section>
+
+            <section>
+                <pre>
+                    <code class="java">
+package com.envelon.miracleBalnk
+
+import com.envelon.miracleBalnk.BankGroup
+import com.envelon.miracleBalnk.client.Client
+import com.envelon.miracleBalnk.crew.Director
+
+class Bank {
+    String name
+    Director director
+    BankGroup bankGroup
+
+    static hasMany = [clients: Client]
+    static belongsTo = [BankGroup]
+
+    static constraints = {
+        name nullable: false, blank: false, unique: true
+    }
+}
+
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h2>Grails Services</h2>
+                <h3>~ Controller</h3>
+                <br/>
+                <img src="image/mvc-c.jpeg">
+
+                <br/>
+                <p class="highlight">
+                    grails-app/services/.../*.groovy
+                </p>
+            </section>
+
+            <section>
+                <pre>
+                    <code class="java">
+class BankService {
+    static transactional = true
+    def acountService
+
+    def bankrupt() {
+        def acounts = acountService.acounts
+        def money = 0
+
+        acounts.each { Account account ->
+            money += account.money
+            account.money = 0
+            account.save()
+        }
+
+        money // no return needed
+    }
+}
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h2>Grails Controllers</h2>
+                <h3>~ View</h3>
+                <br/>
+                <img src="image/mvc-v.jpeg">
+
+                <br/>
+                <p class="highlight">
+                    grails-app/controllers/.../*.groovy
+                </p>
+            </section>
+
+            <section>
+                <pre>
+                    <code class="java">
+class AccountController {
+
+    def springSecurityService
+
+    def index() {
+        def user = springSecurityService.currentUser
+        redirect(action: "show", id: user.account?.id)
+    }
+
+    def show(Long id) {
+        def account = Account.get(id)
+
+        [account: account]
+    }
+}
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h2>Grails gsp</h2>
+                <h3>~ View</h3>
+                <br/>
+                <img src="image/mvc-v.jpeg">
+
+                <br/>
+                <p class="highlight">
+                    grails-app/views/.../*.gsp
+                </p>
+            </section>
+
+            <section>
+                <pre>
+                    <code class="html">
+...
+<g:render template="filter" />
+<g:link controller="bank" action="show">
+    <g:fieldValue bean="${book}" field="title" />
+</g:link>
+...
+                    </code>
+                </pre>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>GORM</h2>
+                <h3>Grails Object Relational Mapping</h3>
+
+                <ul>
+                    <li>
+                        Dynamic finders
+                    </li>
+                    <li>
+                        Criteria builder
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Scaffolding</h2>
+                <p>
+                    Templates for controllers, views and more
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Grails Plugins</h2>
+                <ul>
+                    <li>
+                        Spring Security Core Plugin
+                    </li>
+                    <li>
+                        Resources Plugin
+                    </li>
+                    <li>
+                        Database Migration
+                    </li>
+                    <li>
+                        Fields
+                    </li>
+                    <li>
+                        Joda Time
+                    </li>
+                    <li>
+                        Twitter Bootstrap
+                    </li>
+                    <li>
+                        Country Selector
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Back to the Start...</h2>
+                <br/>
+                <div class="fragment">
+                    <img src="image/envelon.png">
+
+                    <h2 class="highlight">
+                        ... is hiring !!!
+                    </h2>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Thank you ...</h2>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>References</h2>
+                <div style="text-align: left">
+                    <h4 class="highlight">This Presentation</h4>
+                    <ul>
+                        <li>
+                            kuceram.github.io/envelon-presentations
+                        </li>
+                    </ul>
+                    <br/>
+
+                    <h4 class="highlight">Books</h4>
+                    <ul>
+                        <li>
+                            The Definitive Guide to Grails 2 (Jeff Scott Brown , Graeme Rocher)
+                        </li>
+                    </ul>
+                    <br/>
+
+                    <h4 class="highlight">Web</h4>
+                    <ul>
+                        <li>
+                            grails.org
+                        </li>
+                        <li>
+                            grails.org/doc/latest/
+                        </li>
+                        <li>
+                            grails.org/plugins/
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    </div>
+
+
+</div>
+
+<script src="../lib/revealjs/lib/js/head.min.js"></script>
+<script src="../lib/revealjs/js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: false,
+        history: false,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: '../lib/revealjs/lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: '../lib/revealjs/plugin/markdown/showdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: '../lib/revealjs/plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: '../lib/revealjs/plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: '../lib/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: '../lib/revealjs/plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+            // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+</script>
+
+</body>
+</html>
